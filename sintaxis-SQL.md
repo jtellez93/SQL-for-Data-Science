@@ -68,12 +68,7 @@ Para agregar comentarios en nuestro codigo usamos la expresión `/* comentario *
 se puede comentar para describir el codigo y tambien para omitir en algunas opcaciones algunas lineas de codigo.
 
 ~~~~Mysql
-/* aqui va un comentario */
-
-SELECT columna1
---, columna2, 
-columna3,
-FROM tabla1
+--aqui va un comentario
 
 SELECT columna1
 /* , columna2, 
