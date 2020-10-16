@@ -63,5 +63,24 @@ WHERE columna1 = condicion
 );
 ~~~~
 
+## Comentarios en el codigo SQL
+Para agregar comentarios en nuestro codigo usamos la expresión `/* comentario */` si es una seccion de codigo o `--` cuando solo es una linea de codigo
+se puede comentar para describir el codigo y tambien para omitir en algunas opcaciones algunas lineas de codigo.
+
+~~~~Mysql
+/* aqui va un comentario */
+
+SELECT columna1
+--, columna2, 
+columna3,
+FROM tabla1
+
+SELECT columna1
+/* , columna2, 
+columna3,
+*/
+FROM tabla1
+~~~~
+
 
 
