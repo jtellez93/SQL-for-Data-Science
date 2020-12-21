@@ -128,15 +128,55 @@ FROM  table_name;
 ~~~~
 
 
+## Funciones agregadas
+Las funciones agregadas proporcionan varias formas de resumir los datos.
 
+| Función   | Descripción                         |
+| --------- | ----------------------------------- |
+| AVG()     | Media de los valores de la columna  |
+| COUNT()   | Cuenta el numero de valores         |
+| MIN()     | Encuentra el valor minimo           |
+| MAX()     | Encuentra el valor maximo           |
+| SUM()     | Suma los valores de la columna      |
 
+Es importante aclarar que estas funciones ignoran los valores nulos.
+~~~~Mysql
+--AVG
+SELECT AVG(column_name) AS avg_column_name
+FROM  table_name;
 
+--COUNT
+--Cuenta todos los registros de una tabla
+SELECT COUNT(*) AS total_table_name
+FROM  table_name;
 
+--Cuenta todos los registros de una columna especifica
+SELECT COUNT(column_name) AS total_column_name 
+FROM  table_name;
 
+--MAX and MIN
+SELECT MIN(column_name) AS min_column_name 
+FROM  table_name;
 
+SELECT MAX(column_name) AS max_column_name
+,MIN(column_name) AS min_column_name
+FROM  table_name;
 
+--SUM
+SELECT SUM(column_name) AS total_column_name
+FROM  table_name;
 
+SELECT SUM(column_name_1 * column_name_2) AS total_column_name
+FROM  table_name
+WHERE column_name_3 operator value;
+~~~~
 
+Cuando se tiene una tabla con registros duplicados como por ejemplo un historico de ventas, los clientes aparecen varias veces a lo largo de la tabla, en este caso si quiero usar funciones agregadas es importante que tome registros unicos para la operacion deseada, para esto se hace uso de `DISTINCT`
+
+~~~~Mysql
+SELECT COUNT(DISTINCT column_name)
+FROM  table_name;
+~~~~
 
 
 
