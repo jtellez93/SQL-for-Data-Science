@@ -19,3 +19,53 @@ WHERE column_name operator value;
 | <=         | Menor o igual    |
 | BETWEEN    | Entre un rango   |
 | IS NULL    | Es un valor nulo |
+
+Cuando estamos filtrando y el `value` es tipo caracter debe ir entre comillas simples `'value'`, cuando hacemos filtro en un rango debe ir unido con `AND`
+
+~~~~Mysql
+SELECT column_name, column_name
+FROM  table_name
+WHERE column_name operator number;
+
+SELECT column_name, column_name
+FROM  table_name
+WHERE column_name operator 'text';
+
+SELECT column_name, column_name
+FROM  table_name
+WHERE column_name BETWEEN number AND number;
+~~~~
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
