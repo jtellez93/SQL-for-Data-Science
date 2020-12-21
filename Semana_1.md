@@ -47,7 +47,7 @@ Para insertar datos se usa el comando `INSERT INTO` luego se especifica la tabla
 INSERT INTO tabla1 VALUES('valor.columna1',NULL,'valor.columna3');
 ~~~~
 
-de esta forma se ingresan los valores a la tabla, justo en el orden delcomando VALUES, otra forma es especificando el orden antes de VALUES.
+de esta forma se ingresan los valores a la tabla, justo en el orden del comando `VALUES`, otra forma es especificando el orden antes de `VALUES`.
 
 ~~~~Mysql
 INSERT INTO tabla1 (columna1, columna2, columna3) VALUES('valor.columna1',NULL,'valor.columna3');
