@@ -78,7 +78,7 @@ Este operador o prefijo se usa cuando queremos extraer registros que contienen u
 | 't%@gmail.com'       | Toma todos los correos que inicien con t                      |
 
 
-## Ordenar con ORDER BY
+## Ordenar
 
 Para ordenar los datos usamos la clausula `ORDER BY` la cual nos permite ordenarlos de forma ascendente `ASC` o descendente `DESC`, tambien nos permite ordenar por una columna o por varias columnas, `ORDER BY` siempre debe ser la ultima clausula en la instruccion `SELECT`
 ~~~~Mysql
@@ -95,10 +95,37 @@ FROM  table_name
 ORDER BY column_name ASC, column_name ASC, column_name DESC;
 ~~~~
 
+## Operadores matematicos
 
+| Operador     | Acción         |
+| ------------ | -------------- |
+| +            | Suma           |
+| -            | Resta          |
+| *            | Multiplicación |
+| /            | División       |
 
+Estos operadores permiten ejecutar operaciones entre columnas, esta operacion se muestra en una columna nueva, el comando `AS` asigna el nombre a esta nueva columna.
+~~~~Mysql
+SELECT column_name_1
+,column_name_2
+,column_name_1 * column_name_2 AS column_name_Total
+FROM  table_name;
+~~~~
+Puedo usar varios operadores en la misma consulta, estos se ejecutan en el siguiente orden:
+1. Parentesis `()`.
+2. Exponentes.
+3. Multiplicacion `*`.
+4. Division `/`.
+5. Suma `+`.
+6. Resta `-`.
 
-
+~~~~Mysql
+SELECT column_name_1
+,column_name_2
+,column_name_3
+,(column_name_1 - column_name_2)/column_name_3 AS column_name_Total
+FROM  table_name;
+~~~~
 
 
 
