@@ -1,4 +1,4 @@
-# SQL-for-Data-Science
+# SQL for Data Science
 
 En este repositorio cuenta con apuntes basicos sobre el manejo de SQL.
 
