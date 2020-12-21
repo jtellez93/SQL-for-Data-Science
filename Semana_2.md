@@ -42,14 +42,29 @@ WHERE column_name IN (value, value, value);
 ~~~~
 
 ## Operador OR
-Este operador se usa cuando queremos asignar varias condiciones a la vez (Uniones entre conjuntos), no evalua la segunda condicion si se cumple la primera.
+Este operador se usa cuando queremos asignar varias condiciones a la vez (Uniones entre conjuntos), no evalua la segunda condicion si se cumple la primera. Este operador tambien se puede usar con `AND`.
 
 ~~~~Mysql
 SELECT column_name, column_name
 FROM  table_name
 WHERE column_name operator value OR value;
-~~~~
 
+SELECT column_name, column_name
+FROM  table_name
+WHERE (column_name operator value OR
+column_name operator value)
+AND column_name operator value;
+~~~~
+Es importante hacer uso de los parentesis para asegurarnos de obtener los valores que necesitamos.
+
+## Operador NOT
+Este operador es una forma de excluir diferentes opciones, 
+~~~~Mysql
+SELECT column_name, column_name
+FROM  table_name
+WHERE NOT column_name operator value 
+AND NOT column_name operator value;
+~~~~
 
 
 
