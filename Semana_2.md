@@ -185,7 +185,7 @@ SELECT CostumerID
 ,COUNT(*) AS orders
 FROM  orders
 GROUP BY CostumerID
-HAVING COUNT (*) >= value;
+HAVING COUNT (*) >= 2;
 ~~~~
 
 En caso de que queramos filtrar despues de hacer un agrupamientohay que tener encuenta que `WHERE`no filtra para grupos dado que filtra es por registro, en ese caso debemos usar `HAVING`.
