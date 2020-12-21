@@ -32,7 +32,7 @@ FROM  table_name
 WHERE column_name BETWEEN value AND value;
 ~~~~
 
-## Operador IN
+### Operador IN
 Este operador se usa cuando queremos asignar varias condiciones a la vez (Intersecciones entre conjuntos), estas condiciones deben ir entre parentesis y separadas por `,`.
 
 ~~~~Mysql
@@ -41,7 +41,7 @@ FROM  table_name
 WHERE column_name IN (value, value, value);
 ~~~~
 
-## Operador OR
+### Operador OR
 Este operador se usa cuando queremos asignar varias condiciones a la vez (Uniones entre conjuntos), no evalua la segunda condicion si se cumple la primera. Este operador tambien se puede usar con `AND`.
 
 ~~~~Mysql
@@ -57,14 +57,24 @@ AND column_name operator value;
 ~~~~
 Es importante hacer uso de los parentesis para asegurarnos de obtener los valores que necesitamos.
 
-## Operador NOT
-Este operador es una forma de excluir diferentes opciones, 
+### Operador NOT
+Este operador es una forma de excluir diferentes opciones.
 ~~~~Mysql
 SELECT column_name, column_name
 FROM  table_name
 WHERE NOT column_name operator value 
 AND NOT column_name operator value;
 ~~~~
+
+### Usando % Wildcards
+Este operador o prefijo se usa cuando queremos extraer registros que contienen una cadena de texto en especifico.
+
+| Wildcard   | Action                                                        |
+| ---------- | ------------------------------------------------------------- |
+| '%Pizza'   | Toma todo lo que termmine con la palabra Pizza                |
+| 'Pizza%'   | Toma todo lo que empiece con la palabra Pizza                 |
+| '%Pizza%'  | Toma todo lo que tenga antes y después la palabra pizza       |
+
 
 
 
