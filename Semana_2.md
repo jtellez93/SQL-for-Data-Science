@@ -78,6 +78,23 @@ Este operador o prefijo se usa cuando queremos extraer registros que contienen u
 | 't%@gmail.com'       | Toma todos los correos que inicien con t                      |
 
 
+## Ordenar con ORDER BY
+
+Para ordenar los datos usamos la clausula `ORDER BY` la cual nos permite ordenarlos de forma ascendente `ASC` o descendente `DESC`, tambien nos permite ordenar por una columna o por varias columnas, `ORDER BY` siempre debe ser la ultima clausula en la instruccion `SELECT`
+~~~~Mysql
+SELECT column_name, column_name
+FROM  table_name
+ORDER BY column_name;
+
+SELECT column_name, column_name
+FROM  table_name
+ORDER BY column_name, column_name, column_name;
+
+SELECT column_name, column_name
+FROM  table_name
+ORDER BY column_name ASC, column_name ASC, column_name DESC;
+~~~~
+
 
 
 
