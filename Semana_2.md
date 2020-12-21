@@ -25,18 +25,30 @@ Cuando estamos filtrando y el `value` es tipo caracter debe ir entre comillas si
 ~~~~Mysql
 SELECT column_name, column_name
 FROM  table_name
-WHERE column_name operator number;
-
-SELECT column_name, column_name
-FROM  table_name
 WHERE column_name operator 'text';
 
 SELECT column_name, column_name
 FROM  table_name
-WHERE column_name BETWEEN number AND number;
+WHERE column_name BETWEEN value AND value;
 ~~~~
 
+## Operador IN
+Este operador se usa cuando queremos asignar varias condiciones a la vez (Intersecciones entre conjuntos), estas condiciones deben ir entre parentesis y separadas por `,`.
 
+~~~~Mysql
+SELECT column_name, column_name
+FROM  table_name
+WHERE column_name IN (value, value, value);
+~~~~
+
+## Operador OR
+Este operador se usa cuando queremos asignar varias condiciones a la vez (Uniones entre conjuntos), no evalua la segunda condicion si se cumple la primera.
+
+~~~~Mysql
+SELECT column_name, column_name
+FROM  table_name
+WHERE column_name operator value OR value;
+~~~~
 
 
 
