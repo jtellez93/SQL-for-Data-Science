@@ -79,7 +79,6 @@ Este operador o prefijo se usa cuando queremos extraer registros que contienen u
 
 
 ## Ordenar
-
 Para ordenar los datos usamos la clausula `ORDER BY` la cual nos permite ordenarlos de forma ascendente `ASC` o descendente `DESC`, tambien nos permite ordenar por una columna o por varias columnas, `ORDER BY` siempre debe ser la ultima clausula en la instruccion `SELECT`
 ~~~~Mysql
 SELECT column_name, column_name
@@ -178,7 +177,18 @@ SELECT COUNT(DISTINCT column_name)
 FROM  table_name;
 ~~~~
 
+## Agrupar datos
+Esta operacion es util cuando queremos algun resumen de nuestros datos y estos se pueden clasificar por alguna variable, en este caso tenemos una base de datos de clientes y queremos saber el numero de clientes por region. En el caso de los valores nulos, estos se agrupan como una sola categoria. `GROUP BY` permite hacer agrupaciones por columna o por varias columnas, en caso que sean varias deben ir separadas por `,` 
+~~~~Mysql
+-- Recuento de pedidos de clientes que tienen mas de dos pedidos
+SELECT CostumerID
+,COUNT(*) AS orders
+FROM  orders
+GROUP BY CostumerID
+HAVING COUNT (*) >= value;
+~~~~
 
+En caso de que queramos filtrar despues de hacer un agrupamientohay que tener encuenta que `WHERE`no filtra para grupos dado que filtra es por registro, en ese caso debemos usar `HAVING`.
 
 
 
