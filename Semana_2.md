@@ -77,6 +77,19 @@ Este operador o prefijo se usa cuando queremos extraer registros que contienen u
 | 'S%E'                | Toma todas las palabras que inicien con S y terminen con E    |
 | 't%@gmail.com'       | Toma todos los correos que inicien con t                      |
 
+~~~~Mysql
+SELECT column_name, column_name
+FROM  table_name
+WHERE column_name like '%Pizza';
+
+SELECT column_name, column_name
+FROM  table_name
+WHERE column_name like 'Pizza%';
+
+SELECT column_name, column_name
+FROM  table_name
+WHERE column_name like '%Pizza%';
+~~~~
 
 ## Ordenar
 Para ordenar los datos usamos la clausula `ORDER BY` la cual nos permite ordenarlos de forma ascendente `ASC` o descendente `DESC`, tambien nos permite ordenar por una columna o por varias columnas, `ORDER BY` siempre debe ser la ultima clausula en la instruccion `SELECT`
