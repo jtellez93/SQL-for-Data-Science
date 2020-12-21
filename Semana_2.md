@@ -67,13 +67,15 @@ AND NOT column_name operator value;
 ~~~~
 
 ### Usando % Wildcards
-Este operador o prefijo se usa cuando queremos extraer registros que contienen una cadena de texto en especifico.
+Este operador o prefijo se usa cuando queremos extraer registros que contienen una cadena de texto en especial.
 
-| Wildcard   | Action                                                        |
-| ---------- | ------------------------------------------------------------- |
-| '%Pizza'   | Toma todo lo que termmine con la palabra Pizza                |
-| 'Pizza%'   | Toma todo lo que empiece con la palabra Pizza                 |
-| '%Pizza%'  | Toma todo lo que tenga antes y después la palabra pizza       |
+| Wildcard             | Action                                                        |
+| -------------------- | ------------------------------------------------------------- |
+| '%Pizza' o '\_Pizza' | Toma todo lo que termmine con la palabra Pizza                |
+| 'Pizza%'             | Toma todo lo que empiece con la palabra Pizza                 |
+| '%Pizza%'            | Toma todo lo que tenga antes y después la palabra pizza       |
+| 'S%E'                | Toma todas las palabras que inicien con S y terminen con E    |
+| 't%@gmail.com'       | Toma todos los correos que inicien con t                      |
 
 
 
