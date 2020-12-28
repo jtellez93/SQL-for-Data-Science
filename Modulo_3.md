@@ -24,7 +24,7 @@ WHERE cust_id IN SELECT costumer_id
             WHERE prod_name = 'Toothbrush';
 ~~~~
 
-Tambien es importante hacer una buena identacion del codigo, esto facilita la lectura y comprension de las subconsultas, si se toma codigo SQL de algun sistema y no esta identado el sitio [https://poorsql.com/](PoorSQL) identa de forma automatica el codigo que le suministremos.
+Tambien es importante hacer una buena identacion del codigo, esto facilita la lectura y comprension de las subconsultas, si se toma codigo SQL de algun sistema y no esta identado el sitio (https://poorsql.com/)[PoorSQL] identa de forma automatica el codigo que le suministremos.
 
 
 
