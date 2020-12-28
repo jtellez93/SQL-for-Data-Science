@@ -36,13 +36,32 @@ Tambien es importante hacer una buena identacion del codigo, esto facilita la le
 ### Subqueries for calculations
 Finalmente tambien es importante mencionar que tabien se pueden usar sudconsultas para hacer calculos.
 
-Numero total de ordenes por estado para cada cliente.
+En este ejemplo calculamos el numero total de ordenes por estado para cada cliente.
+~~~~Mysql
+SELECT Customer_name
+	,Customer_state
+	,(
+		SELECT COUNT(*) AS orders
+		FROM Orders
+		WHERE Orders.Customer_id = Customer.customer_id
+		) AS orders
+FROM Customers
+ORDER BY Customer_name;
+~~~~
 | Customer_name | Customer_state | orders |
 | ------------- | -------------- | ------ |
 | Becky		| IA		 | 5	  |
 | Nita		| CA		 | 6	  |
 | Raj		| OH		 | 0	  |
 | Steve		| AZ		 | 1	  |
+
+
+## Joining Tables
+La sentencia JOIN (unir, combinar) permite combinar registros de una o más tablas en una base de datos. En el Lenguaje de Consultas Estructurado (SQL) hay tres tipos de JOIN: `interno`, `externo` y `cruzado`. El estándar ANSI del SQL especifica cinco tipos de JOIN: INNER, LEFT OUTER, RIGHT OUTER, FULL OUTER y CROSS. Una tabla puede unirse a sí misma, produciendo una auto-combinación, SELF-JOIN.
+
+### Cartesian (Cross) Joins
+Este tipo de union permite tomar cada elemento de la primera tabla y emparejarlo con todos los registros de la segunda tabla, si la primera tabla tiene **X** filas y la segunda tiene **Y** filas, el resultado sera una tabla de **$X\*Y$** filas.
+
 
 ~~~~Mysql
 SELECT Customer_name
@@ -55,10 +74,6 @@ SELECT Customer_name
 FROM Customers
 ORDER BY Customer_name;
 ~~~~
-
-
-
-
 
 
 
