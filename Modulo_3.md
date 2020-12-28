@@ -60,19 +60,14 @@ ORDER BY Customer_name;
 La sentencia JOIN (unir, combinar) permite combinar registros de una o más tablas en una base de datos. En el Lenguaje de Consultas Estructurado (SQL) hay tres tipos de JOIN: `interno`, `externo` y `cruzado`. El estándar ANSI del SQL especifica cinco tipos de JOIN: INNER, LEFT OUTER, RIGHT OUTER, FULL OUTER y CROSS. Una tabla puede unirse a sí misma, produciendo una auto-combinación, SELF-JOIN.
 
 ### Cartesian (Cross) Joins
-Este tipo de union permite tomar cada elemento de la primera tabla y emparejarlo con todos los registros de la segunda tabla, si la primera tabla tiene **X** filas y la segunda tiene **Y** filas, el resultado sera una tabla de **$X\*Y$** filas.
-
+Este tipo de union permite tomar cada elemento de la primera tabla y emparejarlo con todos los registros de la segunda tabla, si la primera tabla tiene **X** filas y la segunda tiene **Y** filas, el resultado sera una tabla de $X\*Y$ filas.
 
 ~~~~Mysql
-SELECT Customer_name
-	,Customer_state
-	,(
-		SELECT COUNT(*) AS orders
-		FROM Orders
-		WHERE Orders.Customer_id = Customer.customer_id
-		) AS orders
-FROM Customers
-ORDER BY Customer_name;
+SELECT product_name
+	,unit_price
+	,company_name
+FROM suppliers
+CROSS JOIN products;
 ~~~~
 
 
