@@ -94,7 +94,7 @@ FROM (
 	);
 ~~~~
 
-
+### Aliases and Self Joins
 
 
 
