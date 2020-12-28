@@ -35,13 +35,22 @@ Tambien es importante hacer una buena identacion del codigo, esto facilita la le
 
 ### Subqueries for calculations
 Finalmente tambien es importante mencionar que tabien se pueden usar sudconsultas para hacer calculos.
+
+Numero total de ordenes por estado para cada cliente.
+| Customer_name | Customer_state | orders |
+| ------------- | -------------- | ------ |
+| Becky		| IA		 | 5	  |
+| Nita		| CA		 | 6	  |
+| Raj		| OH		 | 0	  |
+| Steve		| AZ		 | 1	  |
+
 ~~~~Mysql
 SELECT Customer_name
-	,customer_state
+	,Customer_state
 	,(
 		SELECT COUNT(*) AS orders
 		FROM Orders
-		WHERE Orders.customer_id = Customer.customer_id
+		WHERE Orders.Customer_id = Customer.customer_id
 		) AS orders
 FROM Customers
 ORDER BY Customer_name;
