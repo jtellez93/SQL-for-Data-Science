@@ -66,11 +66,20 @@ Este tipo de union permite tomar cada elemento de la primera tabla y emparejarlo
 SELECT product_name
 	,unit_price
 	,company_name
-FROM suppliers
-CROSS JOIN products;
+FROM Suppliers
+CROSS JOIN Products;
 ~~~~
 
+### Inner Joins
+Una combinación interna se usa para seleccionar registros que tienen valores coincidentes en ambas tablas. Entonces aquí es donde las claves se vuelven realmente importantes en las tablas.
 
+~~~~Mysql
+SELECT Suppliers.CompanyName
+	,ProductName
+	,UnitPrice
+FROM Suppliers
+INNER JOIN Products ON Suppliers.supplierid = Products.supplierid;
+~~~~
 
 
 
