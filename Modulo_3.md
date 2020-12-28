@@ -81,9 +81,18 @@ FROM Suppliers
 INNER JOIN Products ON Suppliers.supplierid = Products.supplierid;
 ~~~~
 
+Con multiples tablas
 
-
-
+~~~~Mysql
+SELECT o.OrderId
+	,c.CompanyName
+	,e.LastName
+FROM (
+	(
+		Orders o INNER JOIN Customers c ON o.CustomerID = c.CustomerID
+		) INNER JOIN Employees e ON o.EmployeeID = E.EmployeeID
+	);
+~~~~
 
 
 
