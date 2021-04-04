@@ -117,7 +117,9 @@ WHERE v.vendor_id = p.vendor_id;
 ~~~~
 
 ### Self Joins
+Self Joins es un caso especial popular del JOIN. Mientras que la mayoría de los JOIN vinculan dos o más tablas entre sí para presentar sus datos juntos, una combinación de sí mismo vincula una tabla a sí misma. Esto normalmente se hace uniendo una tabla a sí misma solo una vez dentro de una consulta SQL, pero es posible hacerlo varias veces dentro de la misma consulta.
 
+Normalmente, cada tabla de una base de datos almacena un tipo específico de información. Por lo tanto, a menudo hay cientos de tablas relacionadas entre sí en una base de datos. Esto implica la necesidad de uniones. Puede unir diferentes tablas por sus columnas comunes mediante la palabra clave. También es posible unirse a una tabla para sí mismo. Este último se conoce como Self Joins.
 
 
 
