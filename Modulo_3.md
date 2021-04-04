@@ -94,10 +94,11 @@ FROM (
 	);
 ~~~~
 
-### Aliases and Self Joins
-#### Aliases
+## Aliases and Self Joins
+### Aliases
 Los alias se usan para simplicar la escritura de las consultas, puedo asignarle un alias a un objeto para facilitar su llamado.
-**Query si alias**
+
+**Query sin alias**
 ~~~~Mysql
 SELECT vendor_name
 	,product_name
@@ -115,7 +116,7 @@ FROM Vendors AS v, Products AS p
 WHERE v.vendor_id = p.vendor_id;
 ~~~~
 
-#### Self Joins
+### Self Joins
 
 
 
