@@ -165,7 +165,7 @@ SELECT ColumName(s)
 FROM table2;
 ~~~~
 
-![Alt text](https://github.com/jtellez93/SQL-for-Data-Science/blob/main/SQL%20JOINS.png?raw=true "Optional Title")
+![Alt text](https://github.com/jtellez93/SQL-for-Data-Science/blob/main/SQL%20JOINS.png?raw=true "SQL JOINS")
 
 
 
