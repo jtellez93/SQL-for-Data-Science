@@ -155,8 +155,15 @@ Customers.CustomerId = Orders.CustomerId
 ORDER BY Customers.CustomerName;
 ~~~~
 
-
-
+## Unions
+Las uniones se usan para unir los resultados de una o mas consultas en una sola tabla, esta union se hace apilando una tabla sobre otra, por tanto es necesario que tengan el mismo numero de columnas y el mismo tipo de dato, las columnas tambien deben estar en el mismo orden.
+~~~~Mysql
+SELECT ColumName(s)
+FROM table1
+UNION
+SELECT ColumName(s)
+FROM table2;
+~~~~
 
 
 
