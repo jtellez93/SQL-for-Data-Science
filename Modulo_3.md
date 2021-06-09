@@ -121,8 +121,39 @@ Self Joins es un caso especial popular del JOIN. Mientras que la mayoría de los
 
 Normalmente, cada tabla de una base de datos almacena un tipo específico de información. Por lo tanto, a menudo hay cientos de tablas relacionadas entre sí en una base de datos. Esto implica la necesidad de uniones. Puede unir diferentes tablas por sus columnas comunes mediante la palabra clave. También es posible unirse a una tabla para sí mismo. Este último se conoce como Self Joins.
 
+## Advanced Joins: Left, Right, and Full Outer Joins
+### Left Join
+Esta union es una union por la izquierda, asumiendo que tenemos dos tablas, x e y, el left join hace la union entre estas tablas conservando todos los elementos de x.
+~~~~Mysql
+SELECT C.CustomerName
+	,O.orderId
+FROM Customers C
+LEFT JOIN Orders O ON C.CustomerId = O.CustomerId
+ORDER BY C.CustomerName;
+~~~~
 
+### Right Join
+Esta union es por la drecha, en este caso conserva todos los elementos de y.
+~~~~Mysql
+SELECT Orders.OrderId
+	,Employees.LastName
+	,Employees.FirstName
+FROM Orders
+RIGTH JOIN Employees ON 
+Orders.EmployeeId = Employees.EmployeeId
+ORDER BY Orders.OrderId;
+~~~~
 
+### Full Outer Join
+Es una union externa completa, extrae todos los elementos de x y todos los elementos de y que tengan una coincidencia o mas.
+~~~~Mysql
+SELECT Customers.CustomerName
+	,Orders.OrderId
+FROM Customers
+FULL OUTER JOIN Orders ON 
+Customers.CustomerId = Orders.CustomerId
+ORDER BY Customers.CustomerName;
+~~~~
 
 
 
