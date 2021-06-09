@@ -165,6 +165,7 @@ SELECT ColumName(s)
 FROM table2;
 ~~~~
 
+![Alt text](/relative/path/to/SQL JOINS.png?raw=true "Optional Title")
 
 
 
