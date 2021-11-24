@@ -1,12 +1,18 @@
 # DDL
 
-**DDL** trata del contenido de la base de datos. Son las siglas de `Data Manipulation Language` y sus comandos son:
+**SQL** tiene dos grandes sublenguajes:
+**DDL** o `Data Definition Language` que nos ayuda a crear la estructura de una base de datos. Existen 3 grandes comandos:
 
-- **Insert:** Inserta o agrega nuevos registros a la tabla.
-- **Update:** Actualiza o modifica los datos que ya existen.
-- **Delete:** Esta sentencia es riesgosa porque puede borrar el contenido de una tabla.
-- **Select:** Trae información de la base de datos.
+- **Create:** Nos ayuda a crear bases de datos, tablas, vistas, índices, etc.
+- **Alter:** Ayuda a alterar o modificar entidades.
+- **Drop:** Nos ayuda a borrar. Hay que tener cuidado al utilizarlo.
+
+## 3 objetos que manipularemos con el lenguaje DDL:
+
+- Database o bases de datos
+- Table o tablas. Son la traducción a SQL de las entidades
+- View o vistas: Se ofrece la proyección de los datos de la base de datos de forma entendible.
 
 ## Lecturas recomendadas
 - [MySQL What is DDL, DML and DCL](https://www.w3schools.in/mysql/ddl-dml-dcl/)
-- [Data manipulation language](https://en.wikipedia.org/wiki/Data_manipulation_language)
+- [Data definition language](https://en.wikipedia.org/wiki/Data_definition_language)
