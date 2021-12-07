@@ -14,6 +14,7 @@ sudo apt-get install postgresql postgresql-contrib
 ```console
 sudo apt-get install pgadmin3
 ```
+Instalacion de [pgadmin4](https://comoinstalar.me/como-instalar-pgadmin-en-ubuntu-20-04-lts/). Para acceder lo hago en la Url: http://127.0.0.1/pgadmin4
 
 ## Iniciar la base de datos
 ```console
