@@ -26,6 +26,8 @@ Dentro de la base de datos activa:
 ```console
 alter user postgres with password '<contraseña>'; -> Las comillas en la contraseña son obligatorias.
 ```
+Usuario: postgres  
+Contraseña: siempre
 
 ## Funciones
 | Comando | Descripcion |
