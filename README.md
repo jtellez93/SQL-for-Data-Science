@@ -9,3 +9,4 @@ Este repositorio cuenta con apuntes basicos sobre el manejo de SQL.
 * [Introduccion, seleccion y recuperacion de datos](https://github.com/jtellez93/SQL-for-Data-Science/blob/main/Modulo_1.md)
 * [Filtrar, ordenar y calcular datos](https://github.com/jtellez93/SQL-for-Data-Science/blob/main/Modulo_2.md)
 * [Subqueries and Joins](https://github.com/jtellez93/SQL-for-Data-Science/blob/main/Modulo_3.md)
+* [PostgreSQL](https://github.com/jtellez93/SQL-for-Data-Science/blob/main/PostgreSQL.md)
