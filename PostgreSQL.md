@@ -32,18 +32,23 @@ Contraseña: siempre
 ## Funciones
 | Comando | Descripcion |
 | -- | -- |
-| ``` \? ``` | Ver los comandos de Postgres |
-| ``` \l ```  | Listar todas las bases de datos |
-| ``` \dt ```  | Ver las tablas de una base de datos |
-| ``` \c nombre_BD ``` | Cambiar a otra BD |
-| ``` \d nombre_tabla ``` | Describir una tabla |
-| ``` \h ``` | Ver todos los comandos SQL |
-| ``` \h nombre_de_la_funcion ``` | Ver como se ejecuta un comando SQL |
-| ``` SELECT version(); ``` | Ver la version de Postgres instalada, importante poner el ';' |
-| ``` \g ``` | Volver a ejecutar la funcion ejecutada anteriormente |
-| ``` \timing ``` | Iniciar temporizador para saber cuando se demora en ejecutar cada comando |
+| ` \? ` | Ver los comandos de Postgres |
+| ` \l `  | Listar todas las bases de datos |
+| ` \dt `  | Ver las tablas de una base de datos |
+| ` \c nombre_BD ` | Cambiar a otra BD |
+| ` \d nombre_tabla ` | Describir una tabla |
+| ` \h ` | Ver todos los comandos SQL |
+| ` \h nombre_de_la_funcion ` | Ver como se ejecuta un comando SQL |
+| ` SELECT version(); ` | Ver la version de Postgres instalada, importante poner el ';' |
+| ` \g ` | Volver a ejecutar la funcion ejecutada anteriormente |
+| ` \timing ` | Iniciar temporizador para saber cuando se demora en ejecutar cada comando |
+| ` SHOW config_file; ` | Ver donde se encuentran los archivos de configuracion |
 
+## Archivos de configuracion de postgres
+- ***postgresql.conf:*** Configuración general de postgres, múltiples opciones referentes a direcciones de conexión de entrada, memoria, cantidad de hilos de pocesamiento, replica, etc.
 
+- ***pg_hba.conf:*** Muestra los roles así como los tipos de acceso a la base de datos.
 
+- ***pg_ident.conf:*** Permite realizar el mapeo de usuarios. Permite definir roles a usuarios del sistema operativo donde se ejecuta postgres.
 
 
