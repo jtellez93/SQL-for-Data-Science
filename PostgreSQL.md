@@ -99,7 +99,7 @@ Elimanos el usuario o role
 DROP ROLE usuario_consulta;
 ```
 
-La mejor forma de crear un usuario o role por pgadmin
+Crear un usuario o role por pgadmin
 ```console
 CREATE ROLE usuario_consulta WITH
   LOGIN
@@ -109,17 +109,13 @@ CREATE ROLE usuario_consulta WITH
   INHERIT
   NOREPLICATION
   CONNECTION LIMIT -1
-  PASSWORD'1234';
+  PASSWORD '1234';
 ```
 
-Para obtorgar privilegios a nuestro usuario_consulta
+Para otorgar privilegios a nuestro usuario_consulta
 
 ```console
-GRANT INSERT, SELECT, UPDATE ON TABLE public.estacion TO usuario_consulta;
-GRANT INSERT, SELECT, UPDATE ON TABLE public.pasajero TO usuario_consulta;
-GRANT INSERT, SELECT, UPDATE ON TABLE public.trayecto TO usuario_consulta;
-GRANT INSERT, SELECT, UPDATE ON TABLE public.tren TO usuario_consulta;
-GRANT INSERT, SELECT, UPDATE ON TABLE public.viaje TO usuario_consulta;
+GRANT INSERT, SELECT, UPDATE ON TABLE public.tabla TO usuario_consulta;
 ```
 
 
