@@ -118,5 +118,6 @@ Para otorgar privilegios a nuestro usuario_consulta
 GRANT INSERT, SELECT, UPDATE ON TABLE public.tabla TO usuario_consulta;
 ```
 
-
+## Inserción masiva de datos
+[Mockaroo](https://www.mockaroo.com/) genera datos aleatorios para probar la base que se este trabajando.
 
